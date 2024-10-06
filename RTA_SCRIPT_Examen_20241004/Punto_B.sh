@@ -14,66 +14,65 @@ if [[ -d $DIR_ARCHIVOS ]]; then
 	echo	
 	echo "======================================"
 	
-	sudo fdisk $DISCO << FIN
-	n
-	e
-	1
-	2048
-	+9G
+        sudo fdisk $DISCO << FIN
+        n
+        e
+        1
 
-	n
-	l
-	4096
-	+200M
+        +9G
 
-	n
-	l
-	415744
-	+200M
+        n
+        l
 
-	n
-	l
-	827392
-	+200M
+        +200M
 
-	n
-	l
-	1239040
-	+200M
+        n
+        l
 
-	n
-	l
-	1650688
-	+200M
+        +200M
 
-	n
-	l
-	2062336
-	+200M
+        n
+        l
 
-	n
-	l
-	2473984
-	+200M
+        +200M
 
-	n
-	l
-	2885632
-	+200M
+        n
+        l
 
-	n
-	l
-	3297280
-	+200M
+        +200M
 
-	n
-	l
-	3708928
-	+200
-	w
-	echo "Particiones creadas con exíto."
+        n
+        l
+
+        +200M
+
+        n
+        l
+
+        +200M
+
+        n
+        l
+
+        +200M
+
+        n
+        l
+
+        +200M
+
+        n
+        l
+
+        +200M
+
+        n
+        l
+
+        +200M
+        w
+        echo "Particiones creadas con exíto."
 FIN
-
 
 	echo "======================================"
 	echo
@@ -98,16 +97,21 @@ FIN
 	echo	
 	echo "======================================"
 	
-	sudo mount ${DISCO}5 $DIR_ARCHIVOS/alumno_1/parcial_1
-	sudo mount ${DISCO}6 $DIR_ARCHIVOS/alumno_1/parcial_2
-	sudo mount ${DISCO}7 $DIR_ARCHIVOS/alumno_1/parcial_3
-	sudo mount ${DISCO}8 $DIR_ARCHIVOS/alumno_2/parcial_1
-	sudo mount ${DISCO}9 $DIR_ARCHIVOS/alumno_2/parcial_2
-	sudo mount ${DISCO}10 $DIR_ARCHIVOS/alumno_2/parcial_3
-	sudo mount ${DISCO}11 $DIR_ARCHIVOS/alumno_3/parcial_1
-	sudo mount ${DISCO}12 $DIR_ARCHIVOS/alumno_3/parcial_2
-	sudo mount ${DISCO}13 $DIR_ARCHIVOS/alumno_3/parcial_3
-	sudo mount ${DISCO}14 ~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/RTA_ARCHIVOS_Examen_20241004/Examenes-UTN/profesores/
+        #   <dispositivo>               <dir>           <tipo>  <opciones>      <dump>  <fsck>
+        echo "${DISCO}5 $DIR_ARCHIVOS/alumno_1/parcial_1 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}6 $DIR_ARCHIVOS/alumno_1/parcial_2 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}7 $DIR_ARCHIVOS/alumno_1/parcial_3 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}8 $DIR_ARCHIVOS/alumno_2/parcial_1 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}9 $DIR_ARCHIVOS/alumno_2/parcial_2 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}10 $DIR_ARCHIVOS/alumno_2/parcial_3 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}11 $DIR_ARCHIVOS/alumno_3/parcial_1 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}12 $DIR_ARCHIVOS/alumno_3/parcial_2 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}13 $DIR_ARCHIVOS/alumno_3/parcial_3 ext4 defaults 0 0" | sudo tee -a /etc/fstab
+        echo "${DISCO}14 $DIR_ARCHIVOS/profesores ext4 defaults 0 0" | sudo tee -a /etc/fstab
+
+        sudo mount -a
+
+	
 	echo "======================================"
 	echo
 	echo "Particiones montadas con exíto."
