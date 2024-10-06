@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR_ARCHIVOS=~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/RTA_ARCHIVOS_Examen_20241004/Examenes-UTN/
+DIR_ARCHIVOS=~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/RTA_ARCHIVOS_Examen_20241004/Examenes-UTN
 
 echo "Creando los grupos."
 sudo groupadd p1c2_2024_gAlumno
