@@ -3,7 +3,7 @@
 #Busco particiones, filtro por el volumen, filtro el nombre de la partición y filtro nuevamente el nombre extrayendole los ':'
 DISCO=$(sudo fdisk -l | grep "10 GiB" | awk '{ print $2}' | awk -F ':' '{print $1}')
 
-DIR_ARCHIVOS=~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/Examenes-UTN
+DIR_ARCHIVOS=~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/RTA_ARCHIVOS_Examen_20241004/Examenes-UTN
 
 if [[ -d $DIR_ARCHIVOS ]]; then
 
@@ -107,7 +107,7 @@ FIN
 	sudo mount ${DISCO}11 $DIR_ARCHIVOS/alumno_3/parcial_1
 	sudo mount ${DISCO}12 $DIR_ARCHIVOS/alumno_3/parcial_2
 	sudo mount ${DISCO}13 $DIR_ARCHIVOS/alumno_3/parcial_3
-	sudo mount ${DISCO}14 ~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/Examenes-UTN/profesores/
+	sudo mount ${DISCO}14 ~/repogit/UTNFRA_SO_1P2C_2024_HARRIET/RTA_ARCHIVOS_Examen_20241004/Examenes-UTN/profesores/
 	echo "======================================"
 	echo
 	echo "Particiones montadas con exíto."
