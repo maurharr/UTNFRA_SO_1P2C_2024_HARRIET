@@ -1,0 +1,4 @@
+Mi IP Publica es: 181.116.179.80
+Mi usuario es: vagrant
+El Hash de mi Usuario es: $y$j9T$HIXNPU/DrODZlJ8sit5Sj1$hajA5.euuNe7pqRlissf5wyNZLs0sRRnptBnVVSpYbD
+La URL de mi repositorio es: git@github.com:maurharr/UTNFRA_SO_1P2C_2024_HARRIET.git
