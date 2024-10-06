@@ -1,0 +1,12 @@
+MemTotal:        2010892 kB
+Chassis Information
+	Manufacturer: Oracle Corporation
+	Type: Other
+	Lock: Not Present
+	Version: Not Specified
+	Serial Number: Not Specified
+	Asset Tag: Not Specified
+	Boot-up State: Safe
+	Power Supply State: Safe
+	Thermal State: Safe
+	Security Status: None
