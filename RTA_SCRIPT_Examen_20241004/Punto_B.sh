@@ -3,7 +3,7 @@
 #Busco particiones, filtro por el volumen, filtro el nombre de la partición y filtro nuevamente el nombre extrayendole los ':'
 DISCO=$(sudo fdisk -l | grep "10 GiB" | awk '{ print $2}' | awk -F ':' '{print $1}')
 
-DIR_ARCHIVOS=~/Examenes-UTN
+DIR_ARCHIVOS=/Examenes-UTN
 
 if [[ -d $DIR_ARCHIVOS ]]; then
 
@@ -71,7 +71,7 @@ if [[ -d $DIR_ARCHIVOS ]]; then
 
         +200M
         w
-        echo "Particiones creadas con exíto."
+        echo "Particiones creadas con éxito."
 FIN
 
 	echo "======================================"
@@ -114,7 +114,7 @@ FIN
 	
 	echo "======================================"
 	echo
-	echo "Particiones montadas con exíto."
+	echo "Particiones montadas con éxito."
 	echo
 	echo "======================================"
 
@@ -122,7 +122,7 @@ FIN
 else
 	echo "======================================"
 	echo
-	echo "El directorio $DIR_ARCHIVOS no existen"
+	echo "El directorio no existe."
 	echo
 	echo "======================================"
 
