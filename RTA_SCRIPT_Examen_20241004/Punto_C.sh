@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR_ARCHIVOS=~/Examenes-UTN
+DIR_ARCHIVOS=/Examenes-UTN
 
 echo "Creando los grupos."
 sudo groupadd p1c2_2024_gAlumno
